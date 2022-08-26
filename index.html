@@ -13,8 +13,8 @@
 <script>
     body = document.getElementById("root")
 
-    let lblA = document.createTextNode("A")
-    let lblB = document.createTextNode("B")
+    let lblA = document.createTextNode("a ")
+    let lblB = document.createTextNode("b ")
     let lblC = document.createTextNode("Sum")
 
     const inputA = document.createElement("input")
@@ -31,6 +31,7 @@
     btn.setAttribute("type", "button")
     btn.style.margin = "10px"
     btn.innerText = "Click"
+
     const res = document.createElement("span")
     res.setAttribute("id", "res")
 
@@ -46,9 +47,19 @@
     body.appendChild(btn);
     body.appendChild(res);
 
+    inputA.addEventListener("change", () => {
+        let a = inputA.value;
+        let b = inputB.value;
+        res.innerText = a * 1 + b * 1;
+    })
+    inputB.addEventListener("change", () => {
+        let a = inputA.value;
+        let b = inputB.value;
+        res.innerText = a * 1 + b * 1;
+    })
     btn.addEventListener("click", () => {
-        let a = document.getElementById("A").value;
-        let b = document.getElementById("B").value;
+        let a = inputA.value;
+        let b = inputB.value;
         res.innerText = a * 1 + b * 1;
     })
 </script>
