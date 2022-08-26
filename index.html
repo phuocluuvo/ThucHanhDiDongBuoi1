@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-ComlblAtible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="root">
+</body>
+<script>
+    body = document.getElementById("root")
+
+    let lblA = document.createTextNode("A")
+    let lblB = document.createTextNode("B")
+    let lblC = document.createTextNode("Sum")
+
+    const inputA = document.createElement("input")
+    inputA.setAttribute("id", "A")
+    inputA.setAttribute("type", "number")
+    inputA.setAttribute("value", 0)
+
+    const inputB = document.createElement("input")
+    inputB.setAttribute("type", "number")
+    inputB.setAttribute("id", "B")
+    inputB.setAttribute("value", 0)
+
+    const btn = document.createElement("button")
+    btn.setAttribute("type", "button")
+    btn.style.margin = "10px"
+    btn.innerText = "Click"
+    const res = document.createElement("span")
+    res.setAttribute("id", "res")
+
+    body.appendChild(lblA)
+    body.appendChild(inputA);
+    body.appendChild(document.createElement("br"))
+    body.appendChild(document.createElement("br"))
+    body.appendChild(lblB)
+    body.appendChild(inputB);
+    body.appendChild(document.createElement("br"))
+    body.appendChild(document.createElement("br"))
+    body.appendChild(lblC);
+    body.appendChild(btn);
+    body.appendChild(res);
+
+    btn.addEventListener("click", () => {
+        let a = document.getElementById("A").value;
+        let b = document.getElementById("B").value;
+        res.innerText = a * 1 + b * 1;
+    })
+</script>
+
+</html>
